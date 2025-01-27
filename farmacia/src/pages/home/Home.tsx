@@ -13,8 +13,8 @@ function Home() {
                          flexDirection: "column",
                          alignItems: "center"
                     }}>
-                        <h2>Seja Bem Vinde!</h2>
-                        <p>Expresse aqui seus pensamentos e opniões</p>
+                        <h2>M&B Drogarias</h2>
+                        <p> Experimente a experiencia de comprar sempre conosco </p>
                     </div>
 
                     <div style={{
