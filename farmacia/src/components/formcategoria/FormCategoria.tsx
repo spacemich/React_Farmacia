@@ -44,10 +44,10 @@ function FormCategoria() {
             try {
                 await atualizar(`/categorias`, categoria, setCategoria)
 
-                alert('O categorias foi atualizado com sucesso!')
+                alert('A categoria foi atualizado com sucesso!')
             } catch (error: any) {
 
-                alert('Erro ao atualizar o tema.')
+                alert('Erro ao atualizar a categoria.')
 
 
             }
@@ -75,13 +75,13 @@ function FormCategoria() {
 
             <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="descricao">Descrição da Categoria</label>
+                    <label htmlFor="nomeCategoria">Descrição da Categoria</label>
                     <input
                         type="text"
                         placeholder="Descreva aqui a categoria do produto"
-                        name='descricao'
+                        name='nomeCategoria'
                         className="border-2 border-slate-700 rounded p-2"
-                        value={categoria.descricao}
+                        value={categoria.nomeCategoria}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>

@@ -14,7 +14,7 @@ function DeletarCategoria() {
 
     async function buscarPorId(id: string) {
      
-            await buscar(`/Categoria/${id}`, setCategoria)
+            await buscar(`/categorias/${id}`, setCategoria)
     }
 
     useEffect(() => {
@@ -27,7 +27,7 @@ function DeletarCategoria() {
         setIsLoading(true)
 
         try {
-            await deletar(`/Categoria/${id}`) 
+            await deletar(`/categorias/${id}`) 
             
             alert('Categoria apagada com sucesso')
 
@@ -40,7 +40,7 @@ function DeletarCategoria() {
     }
 
     function retornar() {
-        navigate("/Categorias")
+        navigate("/categorias")
     }
     
     return (
@@ -53,7 +53,7 @@ function DeletarCategoria() {
                     className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>
                     Categoria
                 </header>
-                <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.descricao}</p>
+                <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.nomeCategoria}</p>
                 <div className="flex">
                     <button 
                         className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2'
