@@ -68,14 +68,21 @@ function FormCategoria() {
     }
 
     return (
+        <div className="min-h-screen bg-cover bg-center"
+        style={{ backgroundImage: "url('https://i.imgur.com/cJSL0WE.jpeg')",
+            backgroundSize: "cover",
+            backgroundAttachment: "fixed",
+            minHeight: "100vh",
+            width: "100%", 
+         }}>
         <div className="container flex flex-col items-center justify-center mx-auto">
-            <h1 className="text-4xl text-center my-8">
+            <h1 className="text-6xl text-center my-20 font-bold bg-indigo-800 bg-opacity-75 text-white text-center py-40 rounded-md">
                 {id === undefined ? 'Cadastrar Categoria' : 'Editar Categoria'}
             </h1>
 
             <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="nomeCategoria">Descrição da Categoria</label>
+                <div className="flex flex-col text-center text-white gap-2 font-bold bg-indigo-800 bg-opacity-75">
+                    <label htmlFor="nomeCategoria"> Descrição da Categoria </label>
                     <input
                         type="text"
                         placeholder="Descreva aqui a categoria do produto"
@@ -102,6 +109,7 @@ function FormCategoria() {
                     }
                 </button>
             </form>
+        </div>
         </div>
     );
 }
